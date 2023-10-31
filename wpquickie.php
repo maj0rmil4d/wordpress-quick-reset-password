@@ -1,4 +1,9 @@
 <?php
+$passphrase = readline("Enter the passphrase: ");
+if ($passphrase !== "your_secret_passphrase") {
+    echo "Incorrect passphrase. Exiting.\n";
+    exit;
+}
 include_once("wp-config.php");
 global $wpdb;
 $my_filename = basename($_SERVER['PHP_SELF']);
